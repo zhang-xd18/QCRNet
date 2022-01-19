@@ -68,5 +68,5 @@ python /home/CRNet/test.py \
 
 ## Acknowledgement
 
-Thank zhilin for his open source code CRNet, you can find his work named CRNet in [Github-CRNet](https://github.com/Kylin9511/CRNet). Thank Chao-Kai Wen and Shi Jin group again for providing the pre-processed COST2100 dataset, you can find their related work named CsiNet in [Github-Python_CsiNet](https://github.com/sydney222/Python_CsiNet) 
+Thank zhilin for his open source code CRNet, you can find his work named CRNet in [Github-CRNet](https://github.com/Kylin9511/CRNet). Thank Chao-Kai Wen and Shi Jin group again for providing the pre-processed COST2100 dataset.
 
