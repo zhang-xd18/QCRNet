@@ -14,7 +14,7 @@ The dataset of channel state information (CSI) matrices is generated from [COST2
 You can generate your own dataset according to the [open source library of COST2100](https://github.com/cost2100/cost2100) as well. The details of data pre-processing can be found in our paper.
 
 ### B. Checkpoints Downloading
-The checkpoints of our proposed method can be downloaded from [Baidu Netdisk]() (passwd: he1o) or [Google Drive]().
+The checkpoints of our proposed method can be downloaded from [Baidu Netdisk](https://pan.baidu.com/s/1KjRYjHZdoX2SerWZkUOT6A) (passwd: 5pkx) or [Google Drive]().
 
 ### C. Project Tree Arrangement
 
@@ -33,7 +33,7 @@ home
 ├── Checkpoints # The checkpoints folder downloaded following section B
 │   ├── in-cr4-6bit.pth
 │   ├── ... 
-├── run.bash # The bash script
+├── run.sh # The bash script
 ...
 ```
 ## Results and reproduction
@@ -56,7 +56,7 @@ outdoor | 16 | 4 | -5.287 | 26.11 | out-cr16-4bit.pth
 
 As aforementioned, we provide model checkpoints for all the results. Our code library supports easy inference. 
 
-**To reproduce all these results, you need to download the given dataset and checkpoints. Also, you should arrange your projects tree as instructed.** An example of **run.sh** is shown as follows.
+To reproduce all these results, you need to download the given dataset and checkpoints. Also, you should arrange your projects tree as instructed. An example of `run.sh` is shown as follows.
 
 ``` bash
 python ./QCRNet/test_QCRNet.py \
