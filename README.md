@@ -1,6 +1,7 @@
-# QforCRNet
+# QCRNet
 ## Overview
-This is a repository for paper "", which has been submitted to the IEEE for possible publication. Trained models and the test script are listed here as a validation of our work.
+This is a Pytorch implementation for paper [A Distribution Adapter for Quantization in Deep
+Learning-Based Massive MIMO CSI Feedback](), which has been submitted to the IEEE for possible publication. The test script and trained models are listed here and the key results can be reproduced as a validation of our work .
 ## Requirements
 To use this project, you need to ensure the following requirements are installed.
 - Python >= 3.8
@@ -12,61 +13,68 @@ The dataset of channel state information (CSI) matrices is generated from [COST2
 
 You can generate your own dataset according to the [open source library of COST2100](https://github.com/cost2100/cost2100) as well. The details of data pre-processing can be found in our paper.
 
-### B. Project Tree Arrangement
+### B. Checkpoints Downloading
+The checkpoints of our proposed method can be downloaded from [Baidu Netdisk]() (passwd: he1o) or [Google Drive]().
+
+### C. Project Tree Arrangement
 
 We recommend you to arrange the project tree as follows.
 
 ```
 home
-├── QCRNet  # The cloned CRNet repository
+├── QCRNet  # The cloned QCRNet repository
 │   ├── dataset
 │   ├── models
 │   ├── utils
-│   ├── test.py
-│   ├── run.bash
-├── COST2100  # The data folder
+│   ├── test_QCRNet.py
+├── COST2100  # COST2100 dataset downloaded following section A
 │   ├── DATA_Htestin.mat
 │   ├── ...
-├── Checkpoints # The checkpoints folder
+├── Checkpoints # The checkpoints folder downloaded following section B
 │   ├── in-cr4-6bit.pth
 │   ├── ... 
+├── run.bash # The bash script
 ...
 ```
 ## Results and reproduction
-The main results reported in our paper are presented as follows. All the listed results can be found in Table1 and Table2 of our paper. They are achieved from our training scheme and quantization strategy.
+The main results reported in our paper are presented as follows. All the listed results can be found in Table1 and Table2 of our paper. They are achieved from our proposed training scheme and quantization strategy.
 
-Scenario | Compression Ratio | Quantization bit width | NMSE | SNR | Checkpoints
+Scenario | Compression Ratio | Quantization bit width | NMSE(dB) | SNR(dB) | Checkpoints
 :--: | :--: | :--: | :--: | :--: | :--:
-indoor | 1/4 | 6 | -26.99 |  | 5.12M | in_04.pth
-indoor | 1/4 | 4 | -26.99 |  | 5.12M | in_04.pth
-indoor | 1/8 | 6 | -16.01 |  | 4.07M | in_08.pth
-indoor | 1/8 | 4 | -16.01 |  | 4.07M | in_08.pth
-indoor | 1/16 | 6 | -11.35 |  | 3.55M | in_16.pth
-indoor | 1/16 | 4 | -11.35 |  | 3.55M | in_16.pth
-outdoor | 1/4 | 6 | -12.70 |  | 5.12M | out_04.pth
-outdoor | 1/4 | 4 | -12.70 |  | 5.12M | out_04.pth
-outdoor | 1/8 | 6 | -8.04 |  | 4.07M | out_08.pth
-outdoor | 1/8 | 4 | -8.04 |  | 4.07M | out_08.pth
-outdoor | 1/16 | 6 | -5.44 |  | 3.55M | out_16.pth
-outdoor | 1/16 | 4 | -5.44 |  | 3.55M | out_16.pth
+indoor | 4 | 6 | -25.25 | 47.14 | in-cr4-6bit.pth
+indoor | 4 | 4 | -18.63 | 30.47 | in-cr4-4bit.pth
+indoor | 8 | 6 | -15.38 | 46.06 | in-cr8-6bit.pth
+indoor | 8 | 4 | -13.95 | 33.14 | in-cr8-4bit.pth
+indoor | 16 | 6 | -10.65 | 44.37 | in-cr16-6bit.pth
+indoor | 16 | 4 | -10.56 | 31.64 | in-cr16-4bit.pth
+outdoor | 4 | 6 | -11.79 | 49.28 | out-cr4-6bit.pth
+outdoor | 4 | 4 | -11.69 | 28.46 | out-cr4-4bit.pth
+outdoor | 8 | 6 | -8.223 | 44.70 | out-cr8-6bit.pth
+outdoor | 8 | 4 | -8.110 | 29.26 | out-cr8-4bit.pth
+outdoor | 16 | 6 | -5.437 | 41.56 | out-cr16-6bit.pth
+outdoor | 16 | 4 | -5.287 | 26.11 | out-cr16-4bit.pth
 
 As aforementioned, we provide model checkpoints for all the results. Our code library supports easy inference. 
 
-**To reproduce all these results, simple add `--evaluate` to `run.sh` and pick the corresponding pre-trained model with `--pretrained`.** An example is shown as follows.
+**To reproduce all these results, you need to download the given dataset and checkpoints. Also, you should arrange your projects tree as instructed.** An example of **run.sh** is shown as follows.
 
 ``` bash
-python /home/CRNet/test.py \
-  --data-dir '/home/COST2100' \  # the dataset path
-  --scenario 'in' \ # the scenario: 'in' for indoor and 'out' for outdoor
-  --pretrained './checkpoints/in_04' \ # the checkpoint path
-  --cr 4 \  # the compression ratio: 4, 8, or 16
+python ./QCRNet/test_QCRNet.py \
+  --data-dir './COST2100' \ # path to the COST2100 dataset
+  --scenario 'in' \ # chosen from ['in','out'] for indoor or outdoor scenarios respectively
+  --pretrained './checkpoints/in-cr4-6bit.pth' \  # path to the pretrained checkpoint
+  --cr 4 \  # chosen from [4, 8, 16]
+  --nbit 6 \  # chosen from [6, 4]
   --evaluate \
-  --batch-size 200 \ 
+  --batch-size 200 \
   --workers 0 \
-  --cpu \
+  --cpu
 ```
 
+  
 ## Acknowledgement
 
-Thank zhilin for his open source code CRNet, you can find his work named CRNet in [Github-CRNet](https://github.com/Kylin9511/CRNet). Thank Chao-Kai Wen and Shi Jin group again for providing the pre-processed COST2100 dataset.
+This repository is modified from the [CRNet open source code](https://github.com/Kylin9511/CRNet). Thank zhilin for his work. 
+
+Thank Chao-Kai Wen and Shi Jin group again for providing the pre-processed COST2100 dataset.
 
