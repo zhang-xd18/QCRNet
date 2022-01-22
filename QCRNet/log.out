@@ -1,0 +1,3 @@
+I 01.22/13:24 test_QCRNet.py:38  ] => PyTorch Version: 1.6.0
+I 01.22/13:24 test_QCRNet.py:38  ] scenario: out, cr: 16, nbit: 4
+I 01.22/13:24 test_QCRNet.py:16  ] Running on CPU
