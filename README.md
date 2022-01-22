@@ -74,7 +74,7 @@ python ./QCRNet/test_QCRNet.py \
   
 ## Acknowledgement
 
-This repository is modified from the [CRNet open source code](https://github.com/Kylin9511/CRNet). Thank zhilin for his work named [CRNet](https://ieeexplore.ieee.org/document/9149229) and you can refer to it if you are instereted in the network details. 
+This repository is modified from the [CRNet open source code](https://github.com/Kylin9511/CRNet). Thank zhilin for his work named [CRNet](https://ieeexplore.ieee.org/document/9149229) and you can refer to it if you are instereted in the details. 
 
 Thank Chao-Kai Wen and Shi Jin group again for providing the pre-processed COST2100 dataset.
 
