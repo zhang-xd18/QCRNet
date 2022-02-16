@@ -14,7 +14,7 @@ The dataset of channel state information (CSI) matrices is generated from [COST2
 You can generate your own dataset according to the [open source library of COST2100](https://github.com/cost2100/cost2100) as well. The details of data pre-processing can be found in our paper.
 
 ### B. Checkpoints Downloading
-The checkpoints of our proposed method can be downloaded from [Baidu Netdisk](https://pan.baidu.com/s/1KjRYjHZdoX2SerWZkUOT6A) (passwd: 5pkx) or [Google Drive]().
+The checkpoints of our proposed method can be downloaded from [Baidu Netdisk](https://pan.baidu.com/s/1KjRYjHZdoX2SerWZkUOT6A) (passwd: 5pkx) or [Google Drive](https://drive.google.com/drive/folders/1vci-FVjjidIQxKpsc7d0pAu0AIiPwxom?usp=sharing).
 
 ### C. Project Tree Arrangement
 
