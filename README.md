@@ -1,7 +1,7 @@
 # QCRNet
 ## Overview
-This is a Pytorch implementation for paper [A Distribution Adapter for Quantization in Deep
-Learning-Based Massive MIMO CSI Feedback](), which has been submitted to the IEEE for possible publication. The test script and trained models are listed here and the key results can be reproduced as a validation of our work .
+This is a Pytorch implementation for paper A Distribution Adapter for Quantization in Deep
+Learning-Based Massive MIMO CSI Feedback, which has been submitted to the IEEE for possible publication. The test script and trained models are listed here and the key results can be reproduced as a validation of our work .
 ## Requirements
 To use this project, you need to ensure the following requirements are installed.
 - Python >= 3.8
