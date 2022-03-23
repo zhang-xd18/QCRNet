@@ -30,7 +30,7 @@ home
 ├── COST2100  # COST2100 dataset downloaded following section A
 │   ├── DATA_Htestin.mat
 │   ├── ...
-├── Checkpoints # The checkpoints folder downloaded following section B
+├── checkpoints # The checkpoints folder downloaded following section B
 │   ├── in-cr4-6bit.pth
 │   ├── ... 
 ├── run.sh # The bash script
