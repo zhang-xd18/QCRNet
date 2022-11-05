@@ -31,10 +31,10 @@ home
 │   ├── models
 │   ├── utils
 │   ├── main.py
-├── Dataset  # Datasets downloaded following section A
+├── Dataset  # Datasets downloaded following Data Preparation
 │   ├── DATA_Htestin.mat
 │   ├── ...
-├── checkpoint_NA # The checkpoints folder downloaded following section B
+├── checkpoint_NA # The checkpoints folder downloaded following Checkpoints Downloading
 │   ├── in_4_6bit.pth
 │   ├── ... 
 ├── run.sh # The bash script
@@ -87,10 +87,10 @@ home
 │   ├── models
 │   ├── utils
 │   ├── main.py
-├── Dataset  # Datasets downloaded following section A
+├── Dataset  # Datasets downloaded following Data Preparation
 │   ├── DATA_Htestin.mat
 │   ├── ...
-├── checkpoint_LA # The checkpoints folder downloaded following section B
+├── checkpoint_LA # The checkpoints folder downloaded following Checkpoints Downloading
 │   ├── in_4_6bit.pth
 │   ├── ... 
 ├── run.sh # The bash script
