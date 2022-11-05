@@ -16,7 +16,7 @@ The CDL dataset is generated referring to the Wireless-Intelligence libirary fro
 
 
 ### B. Checkpoints Downloading
-The checkpoints of our proposed method can be downloaded from [Baidu Netdisk](https://pan.baidu.com/s/1KjRYjHZdoX2SerWZkUOT6A) (passwd: 5pkx) or [Google Drive](https://drive.google.com/drive/folders/1vci-FVjjidIQxKpsc7d0pAu0AIiPwxom?usp=sharing).
+The checkpoints of our proposed method can be downloaded from [Baidu Netdisk](https://pan.baidu.com/s/1YWX8zb52GNSV8phSPO-3eA) (passwd: yn5b) or [Google Drive](https://drive.google.com/drive/folders/1vci-FVjjidIQxKpsc7d0pAu0AIiPwxom?usp=sharing).
 
 ## Performance Reproduction
 ### A. Network-based Adaptor
