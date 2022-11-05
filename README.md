@@ -159,5 +159,5 @@ This repository is modified from the [CRNet open source code](https://github.com
 
 Thank Chao-Kai Wen and Shi Jin group again for providing the pre-processed COST2100 dataset.
 
-Thank OPPO for providing the open dataset Wireless-Intelligence.
+Thank OPPO for providing the open wireless communication dataset Wireless-Intelligence.
 
