@@ -1,7 +1,6 @@
 # QCRNet
 ## Overview
-This is a Pytorch implementation for paper [Quantization Adaptor for Bit-Level Deep
-Learning-Based Massive MIMO CSI Feedback](https://arxiv.org/abs/2211.02937), which has been submitted to the IEEE for possible publication. The test script and trained models are listed here and the key results can be reproduced as a validation of our work .
+This is a Pytorch implementation for paper [Quantization Adaptor for Bit-Level Deep Learning-Based Massive MIMO CSI Feedback](https://ieeexplore.ieee.org/document/10319795). The test script and trained models are listed here and the key results can be reproduced as a validation of our work .
 ## Requirements
 To use this project, you need to ensure the following requirements are installed.
 - Python >= 3.8
